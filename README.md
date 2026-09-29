@@ -1,6 +1,6 @@
 # Checkpoint 2 — ESP32 + OpenWeather + LCD + MQTT
 
-Integrantes do grupo
+Integrantes do grupo:
 Fernanda Botejara Nellessen – RM:569761;
 Enrico Giacometti Guerreiro – RM: 569700;
 Marcos Vinicius de Santana Barreto – RM: 572895;
