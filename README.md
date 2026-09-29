@@ -8,7 +8,7 @@ Sofia Rizzo Burigo – RM: 573751.
 
 Projeto desenvolvido para o Checkpoint 2 — Computational Thinking for Engineering, utilizando um ESP32 com MicroPython para obter informações meteorológicas da API OpenWeather, exibir os dados em um display LCD 20x4 e enviá-los através do protocolo MQTT para um broker HiveMQ.
 
-Sobre o projeto
+# Sobre o projeto
 
 O projeto integra diferentes tecnologias de IoT para realizar a coleta, exibição e transmissão de dados meteorológicos.
 
@@ -38,7 +38,7 @@ HiveMQ
 Node-RED
 JSON
 
-Ligações do LCD
+# Ligações do LCD
 
 O display LCD 20x4 utiliza comunicação I2C com o ESP32.
 
@@ -63,7 +63,7 @@ lcd = I2cLcd(
     20
 )
 
-OpenWeather
+# OpenWeather
 
 O ESP32 utiliza a API do OpenWeather para obter as informações meteorológicas.
 
@@ -83,19 +83,7 @@ lang=pt_br
 
 para solicitar a descrição das condições climáticas em português.
 
-Dados obtidos
-
-O programa extrai da resposta da API:
-
-cidade = dados["name"]
-
-temperatura = dados["main"]["temp"]
-
-umidade = dados["main"]["humidity"]
-
-condicao = dados["weather"][0]["description"]
-
-Informações exibidas no LCD
+# Informações exibidas no LCD
 
 Os dados são apresentados nas quatro linhas do display:
 
@@ -111,7 +99,8 @@ texto_temp = "Temp: {:.1f} C".format(temperatura)
 A condição climática é limitada a 20 caracteres para evitar ultrapassar o tamanho da linha do LCD:
 
 lcd.putstr(condicao[:20])
-📡 Comunicação MQTT
+
+# Comunicação MQTT
 
 Após obter os dados da API, o ESP32 cria uma mensagem em formato JSON.
 
@@ -159,7 +148,7 @@ Um exemplo de mensagem publicada é:
 
 Essa mensagem pode ser recebida pelo Node-RED através do mesmo tópico MQTT.
 
-Funcionamento do programa
+# Funcionamento do programa
 
 O programa executa as seguintes etapas:
 
@@ -223,19 +212,6 @@ Verifique a API
 
 Também existe tratamento de erro durante a publicação MQTT. Caso a publicação falhe, o ESP32 tenta realizar uma nova conexão com o broker.
 
-Estrutura do projeto
-
-O projeto pode ser organizado da seguinte maneira:
-
-Checkpoint-2/
-│
-├── main.py
-├── diagram.json
-├── lcd_api.py
-├── i2c_lcd.py
-└── README.md
-main.py
-
 Programa principal responsável por:
 
 conexão Wi-Fi;
@@ -259,7 +235,7 @@ README.md
 
 Documentação do projeto.
 
-Como executar
+# Como executar
 
 1. Abrir o projeto
 
@@ -338,7 +314,7 @@ msg.payload.condicao
 
 Esses valores podem posteriormente ser utilizados para criar um dashboard.
 
-Objetivos do projeto
+# Objetivos do projeto
 
 O projeto tem como objetivo demonstrar a integração entre:
 
