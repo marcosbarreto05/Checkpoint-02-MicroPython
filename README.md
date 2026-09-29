@@ -233,9 +233,9 @@ Arquivo utilizado pelo Wokwi para definir o circuito e as conexões dos componen
 
 README.md
 
-Documentação do projeto.
+# Documentação do projeto.
 
-# Como executar
+Como executar
 
 1. Abrir o projeto
 
