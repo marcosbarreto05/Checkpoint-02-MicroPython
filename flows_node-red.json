@@ -1,0 +1,79 @@
+[
+    {
+        "id": "cc5f7f34c979ebf5",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "61c98a0b39594683",
+        "type": "mqtt in",
+        "z": "cc5f7f34c979ebf5",
+        "name": "",
+        "topic": "fiap/iot/grupo01/temperatura",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "56cafa2de050238f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "159f9cdadc50c0cb"
+            ]
+        ]
+    },
+    {
+        "id": "159f9cdadc50c0cb",
+        "type": "debug",
+        "z": "cc5f7f34c979ebf5",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "56cafa2de050238f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
