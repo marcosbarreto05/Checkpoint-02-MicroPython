@@ -1,4 +1,4 @@
-Checkpoint 2 — ESP32 + OpenWeather + LCD + MQTT
+# Checkpoint 2 — ESP32 + OpenWeather + LCD + MQTT
 
 Integrantes do grupo
 Fernanda Botejara Nellessen – RM:569761;
